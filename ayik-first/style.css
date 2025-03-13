@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+/* loading page style  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.parent-loader-div {
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100vh;
+    width:100%;
+    padding: 5vh 10vw;
+    transition:translate 1s ease-in;
+    position:fixed;
+    z-index:999;
+}
+
+.loading-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.loading-text {
+    text-align: left;
+    max-width: 700px;
+}
+
+.loading-text > h4{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    opacity: 0.9;
+    color: #5f5f5f;
+    margin-bottom: 20px;
+}
+
+.loading-text > h2{
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.loading-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.loading-status > p {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress {
+    font-size: 64px;
+    font-weight: bold;
+    position: relative;
+}
+
+.progress span {
+    display: inline-block;
+    animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.progress-bar {
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: white;
+    width: 0%;
+    animation: progressAnimation 3s linear forwards;
+}
+
+/* loading page style end  */
+/* main style start  */
+.container {
+position:relative;
+z-index:1;
+}
