@@ -7,8 +7,8 @@
 body {
     width: 100%;
     height: auto;
+    /* background-color:black; */
 }
-
 /* loading page style  */
 * {
     margin: 0;
@@ -129,4 +129,43 @@ body {
 .container {
 position:relative;
 z-index:1;
+}
+
+nav {
+    width:100%;
+    height:60px;
+    background:#00000048;
+}
+
+.nav-div {
+    width:100%;
+    height:100%;
+    display: flex;
+    padding:0 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.nav-div > .nav-contect {
+    display:flex;
+    gap:15px;
+}
+.nav-div > div > p {
+    font-family: sans-serif;
+    font-weight:500;
+    font-size:25px;
+}
+.nav-contect-icon {
+    padding:10px;
+    border-radius:30px;
+    border:1px solid white;
+    
+}
+.nav-contect > div > button {
+    width:2rem;
+    height:2rem;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:1rem;
 }
