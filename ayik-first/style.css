@@ -161,11 +161,69 @@ nav {
     border:1px solid white;
     
 }
-.nav-contect > div > button {
-    width:2rem;
-    height:2rem;
+/* .nav-contect > div > button {
+   
     background:black;
     color:white;
     border:none;
     border-radius:1rem;
+} */
+
+.menu-button {
+    width:2rem;
+    height:2rem;
+    background-color:white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-menu {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+    background-color:white;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-weight:399;
+    gap: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.nav-menu.active {
+    width: 280px;
+    height: 280px;
+    border-radius:10px;
+    transform: scale(1);
+    opacity: 1;
+}
+.nav-menu a {
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out 0.3s;
+}
+.nav-menu.active a {
+    opacity: 1;
+}
+.nav-menu.closing {
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+.nav-menu.closing a {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
 }

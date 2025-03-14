@@ -13,4 +13,15 @@ function updateProgress() {
     }
 }
 updateProgress();
-
+// nav Animation
+function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    if (menu.classList.contains('active')) {
+        menu.classList.add('closing');
+        setTimeout(() => {
+            menu.classList.remove('active', 'closing');
+        }, 300);
+    } else {
+        menu.classList.add('active');
+    }
+}
