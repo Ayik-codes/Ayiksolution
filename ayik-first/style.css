@@ -1,0 +1,456 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+     
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.parent-loader-div {
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    padding: 5vh 10vw;
+    transition: translate 1s ease-in;
+    position: fixed;
+    z-index: 999;
+}
+
+.loading-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.loading-text {
+    text-align: left;
+    max-width: 700px;
+}
+
+.loading-text>h4 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    opacity: 0.9;
+    color: #5f5f5f;
+    margin-bottom: 20px;
+}
+
+.loading-text>h2 {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.loading-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.loading-status>p {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress {
+    font-size: 64px;
+    font-weight: bold;
+    position: relative;
+}
+
+.progress span {
+    display: inline-block;
+    animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.progress-bar {
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: white;
+    width: 0%;
+    animation: progressAnimation 3s linear forwards;
+}
+
+ 
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background: #00000048;
+    position: fixed;
+}
+
+.nav-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.nav-div>.nav-contect {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-div>div>p {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.nav-contect-icon {
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid white;
+
+}
+
+
+
+.menu-button {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 399;
+    gap: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-menu.active {
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out 0.3s;
+}
+
+.nav-menu.active a {
+    opacity: 1;
+}
+
+.nav-menu.closing {
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.nav-menu.closing a {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+
+.hero-section {
+    width: 100%;
+    height: auto;
+    color: white;
+    background: #000;
+    padding: 20px;
+    padding-bottom:100px;
+}
+
+.hero-section>h1 {
+    width: 370px;
+    height: auto;
+    font-size: 60px;
+    color: #989898;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    letter-spacing: 1px;
+    line-height: 60px;
+    padding-top: 120px;
+
+}
+
+.hero-section>h1 span {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    letter-spacing: 1px;
+}
+
+.hero-section>.first-hero-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.hero-section>.first-hero-div>ul {
+    list-style: none;
+    padding: 30px 10px;
+
+}
+
+.hero-section>.first-hero-div>ul>li {
+    display: inline;
+    overflow: hidden;
+    padding: 5px 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    gap: 10px;
+}
+
+.hero-section>.first-hero-div>p {
+    width: 250px;
+    font-family: sans-serif;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+/* hero second div  */
+/* .second-hero-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.second-hero-div>h1 {
+    font-size: 50px;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    align-content: end;
+}
+
+.second-hero-div>ul {
+    list-style: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+ 
+.project-section {
+    width:100%;
+    height:auto;
+    background:white;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    margin-top:-50px;
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:80px;
+}
+.project-heading-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+}
+.project-heading-div > h1 {
+    font-size: 50px;
+    color:black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.project-heading-div > ul {
+    list-style: none;
+}
+.project-heading-div >ul > li {
+    display: inline;
+    overflow: hidden;
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    gap: 10px;
+}
+.project-div {
+    width: 100%;
+    height:auto;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:15px 0;
+}
+.project-div > div {
+    width:47%;
+    height:auto;
+}
+.project-div > div > img {
+    width:100%;
+    border:none;
+    border-radius:10px;
+}
+.project-div > div > h2 {
+    padding:8px 2px;
+    font-weight:300;
+    font-family:serif;
+}
+.project-div > div> ul > li  {
+  display:inline;
+  gap:10px;
+  font-size:13px;
+  text-align:center;
+  padding:5px 8px;
+  border:1px solid rgba(0, 0, 0, 0.473);
+  border-radius:20px;
+}
+.project-discription {
+    width:100%;
+    height:auto;
+    display: flex;
+    justify-content:flex-end;
+}
+.project-discription > div {
+    width:350px;
+    margin:60px;
+}
+.project-discription > div > p {
+    font-size:19px;
+}
+.project-discription > div > button {
+    padding:7px 10px;
+    text-align: center;
+    font-size:10px;
+    border:1px solid black;
+    border-radius:30px;
+    margin-top:10px;
+    font-weight:400;
+}
+.project-discription > div > span {
+    padding:15px;
+    text-align: center;
+    border:1px solid black;
+    border-radius:50%;
+    margin-top:10px;
+}
+
+.moving-heading-section {
+    width:100%;
+    height:150px;
+    padding-top:40px;
+    padding-bottom:70px;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    background-color:black !important;
+    color:white;
+}
+ .moving-heading-section > div{
+   width:100%;
+   overflow:hidden;
+   white-space: nowrap;
+   position: relative;
+ }
+ .moving-heading-section > div span{
+    display: inline-block;
+    min-width:100%;
+    animation: moving 15s linear infinite;
+    font-size: 70px;
+    color:white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+ }
+ @keyframes moving {
+    0% {
+        transform: translateX(0%);
+    } 100% {
+        transform: translateX(-100%);
+    }
+} */ 

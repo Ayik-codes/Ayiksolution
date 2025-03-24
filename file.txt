@@ -1,0 +1,35 @@
+ayiksolution/  
+│── index.html  # Main entry point  
+│── assets/      # Common assets (images, fonts, etc.)  
+│── css/         # Stylesheets  
+│── js/          # JavaScript files  
+│── preloader/  
+│   ├── preloader.html  
+│   ├── preloader.css  
+│   ├── preloader.js  
+│── homepage/  
+│   ├── homepage.html  
+│   ├── homepage.css  
+│   ├── homepage.js  
+│── menubar/  
+│   ├── menubar.html  
+│   ├── menubar.css  
+│   ├── menubar.js  
+│── services/  
+│   ├── services.html  
+│   ├── services.css  
+│   ├── services.js  
+│── team/  
+│   ├── team.html  
+│   ├── team.css  
+│   ├── team.js  
+│── project/  
+│   ├── project.html  
+│   ├── project.css  
+│   ├── project.js  
+│── footer/  
+│   ├── footer.html  
+│   ├── footer.css  
+│   ├── footer.js  
+│── images/      # Store all images  
+│── README.md    # Documentation  

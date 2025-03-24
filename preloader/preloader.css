@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen overlay */
+#start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#preloader-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#text-animation {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Zoom-out animation */
+.zoom-out {
+    animation: zoomOut 1s forwards;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
