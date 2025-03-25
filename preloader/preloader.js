@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Show "Click to Start" screen first
     startScreen.style.display = "flex";
-
+    video.style.display = "none"
     // When user clicks anywhere, start the video
     startScreen.addEventListener("click", function () {
         startScreen.style.display = "none"; // Hide start screen
+        video.style.display = "flex"
         preloader.style.display = "flex"; // Show video preloader
         video.muted = false; // Unmute the video
         video.play(); // Play video

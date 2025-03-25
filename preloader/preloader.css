@@ -22,13 +22,11 @@
     z-index: 1000;
     animation: fadeIn 2s ease-in-out;
 }
-
 /* Fade-in effect */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
 
 #preloader {
     position: fixed;
@@ -39,7 +37,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 9999;
+    z-index:9999;
 }
 
 #preloader-video {
