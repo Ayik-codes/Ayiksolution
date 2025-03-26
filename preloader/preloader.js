@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let mainContent = document.getElementById('main-content')
   let skipDiv = document.getElementById('skipDiv')
   let skipDivBtn = document.getElementById('skipDivBtn')
+  let h1TextBlack = document.querySelectorAll("#h1TextBlack")
+  let h1TextWhite = document.querySelectorAll("#h1TextWhite")
   skipDivBtn.addEventListener('click', () => {
     video.style.display = "none";
     skipDivBtn.style.display = "none"
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     'click',
     function () {
       startScreen.style.display = 'none' // Hide start screen
-      video.style.display = 'flex'
+      video.style.display = 'flex' 
       skipDiv.style.display = 'block'
       preloader.style.display = 'flex' // Show video preloader
       video.muted = false // Unmute the video
@@ -33,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
   video.onended = function () {
     text.classList.remove('hidden')
     text.style.opacity = '1'
-
     // After text animation, apply zoom-out transition
     setTimeout(() => {
       preloader.classList.add('zoom-out')
