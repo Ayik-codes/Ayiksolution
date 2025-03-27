@@ -33,19 +33,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // When the video ends, show text animation
   video.onended = function () {
-    text.classList.remove('hidden')
-    text.style.opacity = '1'
-    // After text animation, apply zoom-out transition
+    // Make the text visible first
+    text.classList.remove('hidden');
+    text.style.opacity = '1';
+  
     setTimeout(() => {
-      preloader.classList.add('zoom-out')
-
-      // After zoom-out animation, remove preloader and show homepage
+      h1TextBlack.forEach((b) => {
+        b.style.transform = "translateY(-0vh)"; // Trigger animation
+      });
+      h1TextWhite.forEach((w) => {
+        w.style.transform = "translateY(0vh)"; // Trigger animation
+      });
+  
+      // After text animation, apply zoom-out transition
       setTimeout(() => {
-        preloader.style.display = 'none'
-        mainContent.style.display = 'block'
-      }, 1000)
-    }, 2000) // 2 sec delay for text animation
-  }
+        preloader.classList.add('zoom-out');
+  
+        // After zoom-out animation, remove preloader and show homepage
+        setTimeout(() => {
+          preloader.style.display = 'none';
+          mainContent.style.display = 'block';
+        }, 1000);
+      }, 2000); // 2 sec delay for text animation
+    }, 100);
+  };
+  
 })
 
 // skip button funtion

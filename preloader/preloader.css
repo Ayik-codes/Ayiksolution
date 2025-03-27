@@ -112,11 +112,11 @@
     color:black;
     padding:10px;
 }
-/* .white-div > h1 {
+#h1TextBlack {
     transform:translateY(100vh);
-    transition:all 1s ease-out 5s;
+    transition:all 2s ease-out ;
 }
-.black-div > h1 { 
+#h1TextWhite { 
     transform:translateY(-100vh);  
-    transition:all 1s ease-out 5s; 
-} */
+    transition:all 2s ease-out; 
+}
