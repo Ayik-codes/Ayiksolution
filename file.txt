@@ -1,35 +1,55 @@
-ayiksolution/  
-│── index.html  # Main entry point  
-│── assets/      # Common assets (images, fonts, etc.)  
-│── css/         # Stylesheets  
-│── js/          # JavaScript files  
-│── preloader/  
-│   ├── preloader.html  
-│   ├── preloader.css  
-│   ├── preloader.js  
-│── homepage/  
-│   ├── homepage.html  
-│   ├── homepage.css  
-│   ├── homepage.js  
-│── menubar/  
-│   ├── menubar.html  
-│   ├── menubar.css  
-│   ├── menubar.js  
-│── services/  
-│   ├── services.html  
-│   ├── services.css  
-│   ├── services.js  
-│── team/  
-│   ├── team.html  
-│   ├── team.css  
-│   ├── team.js  
-│── project/  
-│   ├── project.html  
-│   ├── project.css  
-│   ├── project.js  
-│── footer/  
-│   ├── footer.html  
-│   ├── footer.css  
-│   ├── footer.js  
-│── images/      # Store all images  
-│── README.md    # Documentation  
+C:.
+│   .gitattributes
+│   .gitignore
+│   file.txt
+│   index.html
+│   README.md
+│   
+├───about
+│       about.css
+│       about.html
+│       about.js
+│
+├───ayik-first
+│       index.html
+│       script.js
+│       style.css
+│
+├───footer
+│       footer.css
+│       footer.html
+│       footer.js
+│
+├───homepage
+│       homepage.css
+│       homepage.html
+│       homepage.js
+│
+├───menubar
+│       AYIK_LOGO 1.png
+│       menu-promo-mobile.mp4
+│       menubar.css
+│       menubar.html
+│       menubar.js
+│
+├───preloader
+│       lv_0_20250317123803.mp4
+│       preloader.css
+│       preloader.html
+│       preloader.js
+│
+├───project
+│       project.css
+│       project.html
+│       project.js
+│
+├───services
+│       services.css
+│       services.html
+│       services.js
+│
+└───team
+        photo-1600880292089-90a7e086ee0c.jpeg
+        team.css
+        team.html
+        team.js
